@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài kiểm tra chương</title>
+</head>
+<body>
+    <h3 align="center"><b>BÀI KIỂM TRA CHƯƠNG 2</b></h3>
+    <p align="center">
+        <b>Môn học:</b> <i>Ứng dụng web</i> <br>
+        <b>Mã số sinh viên:</b> <i>12345</i><br>
+        <b>Họ và Tên:</b> <i>Nguyễn Văn A</i> <br>
+    </p>
+
+   <hr width="100%" color="blue" size="2">
+   <p align="center">
+    <a href="Trang bt10-index.html">Trang chủ</a>
+    <a href="Trang bt10-content.html">Nội dung môn học</a>
+    <a href="Trang bt10-register.html">Đăng ký</a>
+   </p>
+
+<h3 align="center">ĐĂNG KÝ THAM GIA DIỄN ĐÀN</h3>
+<form>
+    <table align="center" bgcolor="yellow" border="1">
+        <tr>
+            <td><label for="username">Tên đăng nhập</label></td>
+            <td><input type="text" name="username" id="username" placeholder="Nhập tên đăng nhập" required></td>
+        </tr>
+
+        <tr>
+            <td><label for="password">Mật khẩu</label></td>
+            <td><input type="password" name="password" id="password" required></td>
+        </tr>
+
+        <tr>
+            <td>Giới tính</td>
+            <td>
+                <input type="radio" name="gender" value="male" checked>Nam
+                <input type="radio" name="gender" value="male" >Nữ
+            </td>
+        </tr>
+
+        <tr>
+            <td><label for="birthday">Ngày sinh: </label></td>
+            <td><input type="date" name="data" id="birthday" required></td>
+        </tr>
+
+        <tr>
+            <td><label for="email">Email</label></td>
+            <td><input type="email" name="email" id="email" required></td>
+        </tr>
+
+        <tr>
+            <td>Ngôn ngữ lập trình yêu thích nhất</td>
+            <td>
+                <input list ="Options"><br>
+                <datalist id="Options">
+                    <option value="C++">
+                    <option value="C#">
+                    <option value="PHP">
+                    <option value="Java">
+                    <option value="Python">
+                </datalist>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Quy định tham gia diễn đàn</td>
+            <td>
+                <textarea rows="5" cols="30">Bài viết phải nghiêm túc, không chứa quảng cáo, không nội dung phản cảm
+                </textarea>
+            </td>
+
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>
+                <button type="submit"><img src="submit.png" width="50" height="50"></button>
+                <button type="reset"><img src="reset.png"  width="50" height="50"></button>
+            </td>
+        </tr>
+
+    </table>
+</form>
+
+</body>
+</html>
