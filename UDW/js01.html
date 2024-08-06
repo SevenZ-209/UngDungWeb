@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chương trình tính tuổi</title>
+    <script>
+        function TinhTuoi(){
+            var ten=document.getElementById("txtTen").value;
+            var namsinh= parseInt(document.getElementById("txtNamSinh").value);
+            var date= new Date();
+
+            if(ten="")
+            {
+                alert("Tên chưa nhập");
+                return false;
+            }
+            if(isNaN(namsinh))
+            {
+                alert("Năm sinh không hợp lệ");
+                return false;
+            }
+            document.getElementById("ketqua").innerHTML="Chào bạn " + ten +"!<br>Tuổi bạn là "+ (date.getFullYear()-namsinh);
+            
+        }
+    </script>
+</head>
+<body>
+    <table border="1">
+        <caption><h3>Chương trình tính tuổi</h3></caption>
+        <tr>
+        <td>Nhập vào tên bạn</td>
+        <td>
+            <input type="text" id="txtTen" placeholder="Nhập tên">
+        </td>
+    </tr>
+
+    <tr>
+        <td>Nhập năm sinh</td>
+        <td>
+            <input type="text" id="txtNamSinh" placeholder="Nhập năm sinh">
+        </td>
+    </tr>
+     
+    <tr>
+        <td><button onclick="TinhTuoi()">Tính tuổi</button></td>
+        <td>   
+            <span id="ketqua"></span>
+        </td>
+    </tr>
+
+    </table>
+    
+</body>
+</html>
