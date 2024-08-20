@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function statistic(){
+            var s= document.getElementById("txtS").value;
+            var arr=s.split(" "); //tack=h de dem so tu
+            var i,words=0;
+            var arrKq=[];
+            for(i=0;i<128;i++)
+            arrKq[i]=0;
+           
+            //dem so tu
+            for(i=0;i<arr.length;i++){
+                if(arr[i].trim()!="")
+                words++;
+            }
+            var kq="Characters:"+s.length+"<br>"+
+            "Words:"+words+"<br>";
+            for(i=0;i<s.length;i++){
+                if(s[i]>='a'&&s[i]<='z')//a->z
+                arrKq[s.charCodeAt(i)-32]++;
+                else// cac ki tu khac
+                arrKq[s.charCodeAt(i)]++;
+            }
+            for(i=0;i<arrKq.length;i++){
+                if(arrKq[i]>0)
+                kq+="Character'"+String.fromCharCode(i)+"':"+arrKq[i]+"<br>";
+            }
+            document.getElementById("kq").innerHTML=kq
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <caption><h3>String Stastic</h3></caption>
+        <tr>
+            <td>String:</td>
+            <td><input type="text" name="" id="txts" size="50" value="Hello,how are you?    112345"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button onclick="statistic()">Statistic</button></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><p id="kq"></p></td>
+        </tr>
+    </table>
+    
+</body>
+</html>
